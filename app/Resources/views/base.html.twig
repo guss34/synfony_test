@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+      <li><a href="{{'/'}}">Accueil</a></li>
+      <li><a href="{{path('boutique')}}">boutique</a></li>
+      <li><a href="{{path('about')}}">about</a></li>
+      <li><a href="{{path('contact')}}">contact</a></li>
+        {% block body %}{% endblock %}
+
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

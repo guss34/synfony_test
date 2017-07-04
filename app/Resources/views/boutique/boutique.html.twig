@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div>
+      <h1> boutique!</h1>
+    </div>
+      <table>
+        <thead>
+          <th>numero chambre </th>
+          <th>nbr couchage </th>
+          <th>prix</th>
+        </thead>
+        <tbody>
+          <tr>
+            {% for room in room1 %}
+            <td>{{ room }}</td>
+            {% endfor %}
+            <tr>
+              {% for room in room2 %}
+              <td>{{ room }}</td>
+              {% endfor %}
+            </tr>
+            <tr>
+              {% for room in room3 %}
+              <td> {{ room }}</td>
+              {% endfor %}
+            </tr>
+
+
+        </tbody>
+      </table>
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+table, th, td
+{
+
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+
+{% endblock %}
